@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verse Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!--Theme Toggle-->
+        <div class="theme-toggle">
+            <button id="themeToggle">🌙 Dark Mode</button>
+        </div>
+        <h1 id ="verseHead">Bible Verse Will Appear Here</h1>
+        <input id ="verseDisplay" placeholder="e.g John 3:16">
+        <button id="generate-verse">Generate Bible Verse</button>
+
+        <!--Save/Favourites UI-->
+        <div class="favourites-bar">
+            <button id="save-verse">Save Verse</button>
+            <button id="copy-verse" class="btn btn-secondary" 
+        data-bs-toggle="tooltip" 
+        data-bs-placement="right" 
+        title="Copy Verse">Copy Verse</button>
+            <!-- Toast notification container -->
+                <div id="toast"></div>
+        </div>
+        
+        <div class="timer-section">
+            <label for="interval">Auto Change (secs):</label>
+            <input type="number" id="interval" placeholder="e.g 10" min="5" value="10">
+            <button id="start-auto">Start Auto</button>
+            <button id="stop-auto">Stop Auto</button>
+    </div>
+
+    </div>
+      <!-- Floating Favourites Button -->
+       <div class="expand-btn">
+  <a href="favourites.html" id="viewFavourites" class="floating-btn" aria-label="View Favourites">
+    <ion-icon name="heart-outline"></ion-icon>
+    <span class="btn-label">View My Favourites</span>
+  </a>
+  </div>
+
+<!-- Toast Container (Bottom-Right Corner) -->
+<div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- Add this after your Bootstrap CSS (Popper JS)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Ionicons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

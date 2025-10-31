@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: "Ubuntu", sans-serif;
+      margin: 0;
+      padding: 20px;
+}
+
+.favourites-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    max-width: 90%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.remove-fav {
+      background: none;
+      border: none;
+      color: red;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.3s ease;
+    }
+.remove-fav:hover {
+      transform: scale(1.2);
+      color: darkred;
+    }
+
+button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ffce00;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+button:hover {
+      background-color: #111;
+      color: #fff;
+    }
+
+a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+a:hover {
+      text-decoration: underline;
+    }
+
+/* === THEME TOGGLE */
+.theme-toggle {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+#themeToggle {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #111;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: #333;
+}
+
+/* === DARK MODE STYLES === */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+body.dark-mode a {
+  color: #87cefa;
+}
+
+body.dark-mode #themeToggle {
+  background: none;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+body.dark-mode h2 {
+    background: #222;
+    color: #f1f1f1;
+    border: 1px solid #555;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== favourites dark-mode tweaks ===== */
+body.dark-mode .favourites-container {
+  background: rgba(20, 20, 20, 0.95);
+  color: #e6e6e6;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+body.dark-mode ul li {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+body.dark-mode .remove-fav {
+  color: #ff7b7b; /* softer red for dark bg */
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.6));
+}
+
+body.dark-mode .remove-fav:hover {
+  color: #ff4c4c;
+  transform: scale(1.15);
+}
+
+body.dark-mode button {
+  background: #2a2a2a;
+  color: #f2f2f2;
+  border: 1px solid #444;
+}
